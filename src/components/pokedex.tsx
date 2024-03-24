@@ -1,7 +1,7 @@
 import c from "classnames";
 import { useTheme } from "contexts/use-theme";
 import { usePokemon, usePokemonList, useTextTransition, usePokemonFighting } from "hooks";
-import { useState, useMemo, useEffect, useContext} from "react";
+import { useState, useMemo, useEffect, useContext } from "react";
 import { FavoritesContext, useSelectedPokemon } from "contexts"; 
 import { FavoriteController } from "./favorite-controller";
 import { Button } from "./button";
@@ -10,7 +10,6 @@ import { Search } from './search';
 import "./pokedex.css";
 import { PokemonInfo } from "./pokemon-info";
 import { PokedexProps } from 'models'; 
-
 
 export const Pokedex: React.FC<PokedexProps> = () => { 
   const { theme } = useTheme();
@@ -27,30 +26,30 @@ export const Pokedex: React.FC<PokedexProps> = () => {
   const { selectedPokemon: clickedPokemon } = useSelectedPokemon();
 
   const selectedPokemon = isPokemonClicked ? clickedPokemon : selectedPokemonFromList;
-    
+  const { setSelectedPokemon } = useSelectedPokemon();  
   const pokemonTypes = useMemo(() => selectedPokemon ? selectedPokemon.types.map((type: { type: { name: string } }) => type.type.name) : [], [selectedPokemon]);
 
   const { pokemon: previousPokemon } = usePokemon(i > 0 ? pokemonList[i - 1] : pokemonList[pokemonList.length - 1]);
   const { weaknesses } = usePokemonFighting(pokemonTypes);
   const { pokemon: nextPokemon } = usePokemon(pokemonList[(i + 1) % pokemonList.length]);
  
- 
   const setIndex = (index: number) => {
     setI(index);
     setIsPokemonClicked(false);
   };
 
-
   const prev = () => {
     resetTransition();
     const prevIndex = i === 0 ? pokemonList.length - 1 : i - 1;
     setIndex(prevIndex);
+    setSelectedPokemon(null);
   };
   
   const next = () => {
     resetTransition();
     const nextIndex = i === pokemonList.length - 1 ? 0 : (i + 1) % pokemonList.length;
     setIndex(nextIndex);
+    setSelectedPokemon(null);
   };
 
   const [favorites] = useContext(FavoritesContext);
@@ -62,6 +61,10 @@ export const Pokedex: React.FC<PokedexProps> = () => {
   useEffect(() => {
     if (clickedPokemon) {
       setIsPokemonClicked(true);
+      const newIndex = pokemonList.findIndex(pokemon => pokemon.name === clickedPokemon.name);
+      if (newIndex !== -1) {
+        setI(newIndex);
+      }
     }
   }, [clickedPokemon]);
 
@@ -100,7 +103,7 @@ export const Pokedex: React.FC<PokedexProps> = () => {
           <LedDisplay color="yellow" />
         </div>
         <div>
-        <Search pokemonList={pokemonList} setI={setIndex} />
+        <Search pokemonList={pokemonList} setI={setIndex} setSelectedPokemon={setSelectedPokemon} />
         </div>
         <div className="screens-container">
           <div className="screen second-screen">
