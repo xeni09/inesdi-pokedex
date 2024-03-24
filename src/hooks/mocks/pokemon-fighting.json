@@ -1,0 +1,406 @@
+[
+  {
+      "name": "Grass",
+      "damage_relations": {
+          "super_effective_against": [
+              {"name": "Water"}
+          ],
+          "weak_to": [
+              {"name": "Fire"},
+              {"name": "Ice"},
+              {"name": "Flying"},
+              {"name": "Bug"},
+              {"name": "Poison"}
+          ],
+          "resists": [
+              {"name": "Grass"},
+              {"name": "Water"},
+              {"name": "Electric"},
+              {"name": "Ground"}
+          ],
+          "weak_against": [
+              {"name": "Fire"},
+              {"name": "Ice"},
+              {"name": "Poison"},
+              {"name": "Flying"},
+              {"name": "Bug"}
+          ]
+      }
+  },
+  {
+      "name": "Ground",
+      "damage_relations": {
+          "super_effective_against": [
+              {"name": "Fire"},
+              {"name": "Electric"},
+              {"name": "Poison"},
+              {"name": "Rock"},
+              {"name": "Steel"}
+          ],
+          "weak_to": [
+              {"name": "Grass"},
+              {"name": "Water"},
+              {"name": "Ice"}
+          ],
+          "resists": [
+              {"name": "Poison"},
+              {"name": "Rock"}
+          ],
+          "weak_against": [
+              {"name": "Water"},
+              {"name": "Grass"},
+              {"name": "Ice"}
+          ]
+      }
+  },
+  {
+      "name": "Flying",
+      "damage_relations": {
+          "super_effective_against": [
+              {"name": "Grass"},
+              {"name": "Bug"}
+          ],
+          "weak_to": [
+              {"name": "Electric"},
+              {"name": "Ice"},
+              {"name": "Rock"}
+          ],
+          "resists": [],
+          "weak_against": [
+              {"name": "Electric"},
+              {"name": "Rock"},
+              {"name": "Steel"}
+          ]
+      }
+  },
+  {
+      "name": "Electric",
+      "damage_relations": {
+          "super_effective_against": [
+              {"name": "Water"},
+              {"name": "Flying"}
+          ],
+          "weak_to": [
+              {"name": "Ground"}
+          ],
+          "resists": [
+              {"name": "Electric"},
+              {"name": "Flying"},
+              {"name": "Steel"}
+          ],
+          "weak_against": [
+              {"name": "Grass"},
+              {"name": "Electric"},
+              {"name": "Ground"},
+              {"name": "Dragon"},
+              {"name": "Flying"}
+          ]
+      }
+  },
+  {
+      "name": "Fire",
+      "damage_relations": {
+          "super_effective_against": [
+              {"name": "Grass"},
+              {"name": "Bug"},
+              {"name": "Ice"},
+              {"name": "Steel"}
+          ],
+          "weak_to": [
+              {"name": "Water"},
+              {"name": "Ground"},
+              {"name": "Rock"}
+          ],
+          "resists": [
+              {"name": "Fire"},
+              {"name": "Grass"},
+              {"name": "Ice"},
+              {"name": "Bug"},
+              {"name": "Steel"}
+          ],
+          "weak_against": [
+              {"name": "Water"},
+              {"name": "Rock"},
+              {"name": "Dragon"}
+          ]
+      }
+  },
+  {
+      "name": "Water",
+      "damage_relations": {
+          "super_effective_against": [],
+          "weak_to": [
+              {"name": "Grass"},
+              {"name": "Electric"}
+          ],
+          "resists": [
+              {"name": "Fire"},
+              {"name": "Water"},
+              {"name": "Ice"},
+              {"name": "Steel"}
+          ],
+          "weak_against": [
+              {"name": "Electric"},
+              {"name": "Grass"},
+              {"name": "Dragon"}
+          ]
+      }
+  },
+  {
+      "name": "Rock",
+      "damage_relations": {
+          "super_effective_against": [
+              {"name": "Fire"},
+              {"name": "Ice"},
+              {"name": "Flying"},
+              {"name": "Bug"}
+          ],
+          "weak_to": [
+              {"name": "Water"},
+              {"name": "Grass"},
+              {"name": "Fighting"},
+              {"name": "Ground"},
+              {"name": "Steel"}
+          ],
+          "resists": [
+              {"name": "Normal"},
+              {"name": "Fire"},
+              {"name": "Poison"},
+              {"name": "Flying"}
+          ],
+          "weak_against": [
+              {"name": "Fighting"},
+              {"name": "Ground"},
+              {"name": "Steel"}
+          ]
+      }
+  },
+  {
+      "name": "Normal",
+      "damage_relations": {
+          "super_effective_against": [],
+          "weak_to": [
+              {"name": "Fighting"}
+          ],
+          "resists": [
+              {"name": "Ghost"}
+          ],
+          "weak_against": [
+              {"name": "Fighting"}
+          ]
+      }
+  },
+  {
+      "name": "Fighting",
+      "damage_relations": {
+          "super_effective_against": [
+              {"name": "Normal"},
+              {"name": "Ice"},
+              {"name": "Rock"},
+              {"name": "Dark"},
+              {"name": "Steel"}
+          ],
+          "weak_to": [
+              {"name": "Flying"},
+              {"name": "Psychic"},
+              {"name": "Fairy"}
+          ],
+          "resists": [
+              {"name": "Bug"},
+              {"name": "Rock"},
+              {"name": "Dark"}
+          ],
+          "weak_against": [
+              {"name": "Flying"},
+              {"name": "Psychic"},
+              {"name": "Fairy"}
+          ]
+      }
+  },
+  {
+      "name": "Psychic",
+      "damage_relations": {
+          "super_effective_against": [
+              {"name": "Fighting"},
+              {"name": "Poison"}
+          ],
+          "weak_to": [
+              {"name": "Bug"},
+              {"name": "Ghost"},
+              {"name": "Dark"}
+          ],
+          "resists": [
+              {"name": "Fighting"},
+              {"name": "Psychic"}
+          ],
+          "weak_against": [
+              {"name": "Bug"},
+              {"name": "Ghost"},
+              {"name": "Dark"}
+          ]
+      }
+  },
+  {
+      "name": "Ghost",
+      "damage_relations": {
+          "super_effective_against": [
+              {"name": "Psychic"},
+              {"name": "Ghost"}
+          ],
+          "weak_to": [
+              {"name": "Ghost"},
+              {"name": "Dark"}
+          ],
+          "resists": [
+              {"name": "Normal"},
+              {"name": "Fighting"},
+              {"name": "Poison"},
+              {"name": "Bug"}
+          ],
+          "weak_against": [
+              {"name": "Ghost"},
+              {"name": "Dark"}
+          ]
+      }
+  },
+  {
+      "name": "Bug",
+      "damage_relations": {
+          "super_effective_against": [
+              {"name": "Grass"},
+              {"name": "Psychic"},
+              {"name": "Dark"}
+          ],
+          "weak_to": [
+              {"name": "Fire"},
+              {"name": "Flying"},
+              {"name": "Rock"}
+          ],
+          "resists": [],
+          "weak_against": [
+              {"name": "Fire"},
+              {"name": "Flying"},
+              {"name": "Rock"}
+          ]
+      }
+  },
+  {
+      "name": "Poison",
+      "damage_relations": {
+          "super_effective_against": [
+              {"name": "Grass"},
+              {"name": "Fairy"}
+          ],
+          "weak_to": [
+              {"name": "Ground"},
+              {"name": "Psychic"}
+          ],
+          "resists": [
+              {"name": "Fighting"},
+              {"name": "Poison"},
+              {"name": "Bug"},
+              {"name": "Fairy"}
+          ],
+          "weak_against": [
+              {"name": "Ground"},
+              {"name": "Psychic"}
+          ]
+      }
+  },
+  {
+      "name": "Steel",
+      "damage_relations": {
+          "super_effective_against": [
+              {"name": "Ice"},
+              {"name": "Rock"},
+              {"name": "Fairy"}
+          ],
+          "weak_to": [
+              {"name": "Fire"},
+              {"name": "Fighting"},
+              {"name": "Ground"}
+          ],
+          "resists": [
+              {"name": "Normal"},
+              {"name": "Grass"},
+              {"name": "Ice"},
+              {"name": "Flying"},
+              {"name": "Psychic"},
+              {"name": "Bug"},
+              {"name": "Rock"},
+              {"name": "Dragon"},
+              {"name": "Steel"},
+              {"name": "Fairy"}
+          ],
+          "weak_against": [
+              {"name": "Fire"},
+              {"name": "Fighting"},
+              {"name": "Ground"}
+          ]
+      }
+  },
+  {
+      "name": "Ice",
+      "damage_relations": {
+          "super_effective_against": [
+              {"name": "Grass"},
+              {"name": "Ground"},
+              {"name": "Flying"},
+              {"name": "Dragon"}
+          ],
+          "weak_to": [
+              {"name": "Fire"},
+              {"name": "Fighting"},
+              {"name": "Rock"},
+              {"name": "Steel"}
+          ],
+          "resists": [],
+          "weak_against": [
+              {"name": "Fire"},
+              {"name": "Fighting"},
+              {"name": "Rock"},
+              {"name": "Steel"}
+          ]
+      }
+  },
+  {
+      "name": "Dragon",
+      "damage_relations": {
+          "super_effective_against": [],
+          "weak_to": [
+              {"name": "Ice"},
+              {"name": "Dragon"},
+              {"name": "Fairy"}
+          ],
+          "resists": [
+              {"name": "Fire"},
+              {"name": "Water"},
+              {"name": "Electric"},
+              {"name": "Steel"}
+          ],
+          "weak_against": [
+              {"name": "Ice"},
+              {"name": "Dragon"}
+          ]
+      }
+  },
+  {
+      "name": "Fairy",
+      "damage_relations": {
+          "super_effective_against": [
+              {"name": "Dragon"},
+              {"name": "Fighting"},
+              {"name": "Dark"}
+          ],
+          "weak_to": [
+              {"name": "Poison"},
+              {"name": "Steel"}
+          ],
+          "resists": [],
+          "weak_against": [
+              {"name": "Poison"},
+              {"name": "Steel"}
+          ]
+      }
+  }
+]

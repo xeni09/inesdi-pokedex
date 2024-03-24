@@ -1,0 +1,32 @@
+.led-display {
+  --size: 20px;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  animation: none;
+  align-items: center;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+}
+
+.led-red {
+  background-color: var(--dark-red);
+  border: 4px solid var(--darker-red);
+}
+
+.led-yellow {
+  background-color: var(--dark-yellow);
+  border: 4px solid var(--darker-yellow);
+}
+
+.led-blue {
+  background-color: var(--dark-blue);
+  border: 4px solid var(--darker-blue);
+}
+
+.led-display--active {
+  --size: 24px;
+}

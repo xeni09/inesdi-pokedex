@@ -1,0 +1,71 @@
+.button {
+  width: 55px;
+  height: 45px;
+  background-color: white;
+  border-radius: 10px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #f5f5f5;
+  transform: scale(1.05);
+}
+
+.button.prev::before,
+.button.next::before {
+  content: "";
+  position: absolute;
+}
+
+/* Prev button arrow pointing left */
+.pokedex-red .button.prev::before {
+  border-style: solid;
+  border-width: 10px 20px 10px 0;
+  border-color: transparent var(--dark-red) transparent transparent;
+  margin-right: 5px;
+}
+
+/* Next button arrow pointing right */
+.pokedex-red .button.next::before {
+  border-style: solid;
+  border-width: 10px 0 10px 20px;
+  border-color: transparent transparent transparent var(--dark-red);
+  margin-left: 5px;
+}
+
+/* Prev button arrow pointing left */
+.pokedex-yellow .button.prev::before {
+  border-style: solid;
+  border-width: 10px 20px 10px 0;
+  border-color: transparent var(--dark-yellow) transparent transparent;
+  margin-right: 5px;
+}
+
+/* Next button arrow pointing right */
+.pokedex-yellow button.next::before {
+  border-style: solid;
+  border-width: 10px 0 10px 20px;
+  border-color: transparent transparent transparent var(--dark-yellow);
+  margin-left: 5px;
+}
+
+/* Prev button arrow pointing left */
+.pokedex-blue .button.prev::before {
+  border-style: solid;
+  border-width: 10px 20px 10px 0;
+  border-color: transparent var(--dark-blue) transparent transparent;
+  margin-right: 5px;
+}
+
+/* Next button arrow pointing right */
+.pokedex-blue .button.next::before {
+  border-style: solid;
+  border-width: 10px 0 10px 20px;
+  border-color: transparent transparent transparent var(--dark-blue);
+  margin-left: 5px;
+}

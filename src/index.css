@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 1rem;
+  font-family: "Courier New", Courier, monospace;
+  color: #300000;
+  background-color: #efefef;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+:root {
+  --base-red: #e13535;
+  --dark-red: #990a0a;
+  --darker-red: #6b1414;
+
+  --base-yellow: #ffd700;
+  --dark-yellow: #ad8610;
+  --darker-yellow: #79520f;
+
+  --base-blue: #3aaadb;
+  --dark-blue: #274c6b;
+  --darker-blue: #1b3345;
+
+  --grey: #8f8f8f;
+  --dark-grey: #6d6d6d;
+}
